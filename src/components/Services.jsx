@@ -53,7 +53,7 @@ export default function Services() {
     {
       title: "Cybersecurity Review",
       code: "def audit_surface():",
-      desc: "Practical security checks, ethical hacking mindset, vulnerability research, and safer deployment guidance for digital products.",
+      desc: "Practical security checks, ethical hacking mindset, vulnerability research, and safer deployment guidance, backed by experience identifying software issues including a Google Drive vulnerability.",
       result: 'return "risk reduced"',
       tech: ["Security", "Testing", "Hardening"],
       icon: <FaShieldAlt size={32} />,

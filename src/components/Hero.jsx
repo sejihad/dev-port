@@ -9,7 +9,9 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-left">
-        <div className="badge">Available for full-stack and app projects</div>
+        <div className="badge">
+          Available for full-stack website and app projects
+        </div>
 
         <h1>
           Rayhan Islam Rokon <span>Full-Stack</span> Developer
@@ -17,7 +19,12 @@ export default function Hero() {
 
         <p>
           Tech entrepreneur, app and web developer, and digital strategist
-          building <b> scalable software, mobile apps, and business-ready IT solutions</b>.
+          building{" "}
+          <b>
+            {" "}
+            scalable software, mobile apps, and business-ready IT solutions
+          </b>
+          .
         </p>
 
         <div className="location">Based in Gazipur, Bangladesh</div>
@@ -50,8 +57,8 @@ export default function Hero() {
 
         <div className="stats">
           <div>
-            <h2>2</h2>
-            <p>Companies Led</p>
+            <h2>2+</h2>
+            <p>Companies Lead</p>
           </div>
           <div>
             <h2>3+</h2>
@@ -76,15 +83,15 @@ export default function Hero() {
             <span className="property">developer</span> = {"{"}
             {"\n  "}
             <span className="property">name</span>:{" "}
-            <span className="string">"Rayhan Islam Rokon"</span>,
-            {"\n  "}
+            <span className="string">"Rayhan Islam Rokon"</span>,{"\n  "}
             <span className="property">roles</span>:{" "}
-            <span className="array">["Founder", "CEO", "Full-Stack Developer"]</span>,
-            {"\n  "}
+            <span className="array">
+              ["Founder", "CEO", "Full-Stack Developer"]
+            </span>
+            ,{"\n  "}
             <span className="property">builds</span>:{" "}
             <span className="function">ship</span>(
-            <span className="array">["web", "apps", "software"]</span>)
-            {"\n"}
+            <span className="array">["web", "apps", "software"]</span>){"\n"}
             {"}"};
           </pre>
         </div>

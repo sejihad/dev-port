@@ -398,6 +398,30 @@ h1 {
   line-height: 1.6;
 }
 
+.bio-link,
+.bio-highlight {
+  color: var(--primary, #22d3ee);
+  font-weight: 700;
+}
+
+.bio-link {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.45);
+  transition: all 0.2s ease;
+}
+
+.bio-link:hover {
+  color: var(--success, #4ade80);
+  border-bottom-color: var(--success, #4ade80);
+}
+
+.bio-highlight {
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+
 /* STATS */
 .stats {
   display: flex;

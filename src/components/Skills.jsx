@@ -58,7 +58,7 @@ export default function Skills() {
     {
       name: "Java",
       sub: "public class ReliableBackend {}",
-      val: 84,
+      val:95,
       color: "orange",
       icon: <FaJava size={32} />,
     },
@@ -177,14 +177,14 @@ export default function Skills() {
               <FaLaptopCode size={32} />
             </div>
             <div className="stat-number">MERN</div>
-            <div className="stat-label">MongoDB, Express, React, Node</div>
+        
           </div>
           <div className="stat-card">
             <div className="stat-icon">
               <SiReact size={32} />
             </div>
             <div className="stat-number">Apps</div>
-            <div className="stat-label">React Native Development</div>
+           
           </div>
           <div className="stat-card">
             <div className="stat-icon">

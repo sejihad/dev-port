@@ -62,7 +62,7 @@ export default function Portfolio() {
       title: "Security Audit Toolkit",
       file: "security_scan.py",
       code: "findings = audit(target)",
-      desc: "A Python-based security review workflow for checking exposed surfaces, weak configurations, and safer deployment practices.",
+      desc: "A Python-based security review workflow inspired by ethical hacking and vulnerability research, including experience with a Google Drive vulnerability discovery.",
       stats: "Audit",
       statsLabel: "Security",
       tech: ["Python", "Testing", "Hardening"],

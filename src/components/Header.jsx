@@ -72,7 +72,7 @@ export default function Header() {
           <Link to="/" className="logo" onClick={handleLogoClick}>
             <div className="logo-icon">&gt;_</div>
             <div className="logo-text">
-              <span className="logo-name">Rayhan Rokon</span>
+              <span className="logo-name">Rayhan Islam Rokon</span>
               <span className="logo-sub">Full-Stack Developer</span>
             </div>
           </Link>

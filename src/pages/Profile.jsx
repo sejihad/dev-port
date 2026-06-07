@@ -137,9 +137,32 @@ export default function Profile() {
             </p>
             <p className="desc-continue">
               Rayhan is a tech entrepreneur based in Gazipur, Bangladesh. He is
-              the Founder and CEO of Digital NexGen and Sohoz Point, working
-              across MERN stack web development, React Native app development, digital marketing, IT
-              services, and ethical security research. He studied at Model
+              the Founder and CEO of{" "}
+              <a
+                className="bio-link"
+                href="https://digitalnexgen.co"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Digital NexGen
+              </a>{" "}
+              and{" "}
+              <a
+                className="bio-link"
+                href="https://sohozpoint.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sohoz Point
+              </a>
+              , working
+              across MERN stack web development, React Native app development,
+              digital marketing, IT services, and ethical security research. He
+              is known for identifying software vulnerabilities, including a{" "}
+              <span className="bio-highlight">
+                discovered vulnerability in Google Drive
+              </span>
+              . He studied at Model
               Institute of Science & Technology (MIST).
             </p>
           </div>

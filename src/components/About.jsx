@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter,FaFacebook } from "react-icons/fa";
 import "./About.css";
 
 export default function About() {
@@ -25,10 +25,18 @@ export default function About() {
     },
     {
       key: "security",
-      label: "Ethical hacking and vulnerability research",
+      label: "Ethical hacking, vulnerability research, Google Drive finding",
       val: 86,
     },
   ];
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/Resume.pdf";
+    link.download = "Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section className="about" id="about">
@@ -67,31 +75,64 @@ export default function About() {
 
         <p className="about-text">
           Rayhan Islam Rokon is a Bangladeshi tech entrepreneur, full-stack
-          developer, React Native app developer, and digital marketer. As Founder and CEO of
-          Digital NexGen and Sohoz Point, he focuses on helping businesses move
-          faster with MERN stack websites, mobile apps, software systems, IT
-          services, digital marketing, and secure technology practices.
+          developer, React Native app developer, and digital marketer. As
+          Founder and CEO of Digital NexGen and Sohoz Point, he focuses on
+          helping businesses move faster with MERN stack websites, mobile apps,
+          software systems, IT services, digital marketing, and secure
+          technology practices. He is also known for ethical hacking and
+          identifying software vulnerabilities, including a discovered
+          vulnerability in Google Drive.
         </p>
 
         <div className="about-actions">
-          <button className="resume-btn">Download Resume</button>
+          <button className="resume-btn" onClick={downloadResume}>
+            Download Resume
+          </button>
 
           <div className="socials">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/rayhanislamrokon"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGithub />
             </a>
 
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://linkedin.com/in/rayhan-islam-rokon"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaLinkedinIn />
             </a>
+            <a
+              href="https://instagram.com/rayhanislamrokon"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+            </a>
 
-            <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://x.com/RayhanIRokon"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaTwitter />
+            </a>
+            <a
+              href="https://facebook.com/RayhanIslamRokonCEO"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebook />
             </a>
           </div>
         </div>
 
-        <div className="about-footer">return "software that serves real business goals"</div>
+        <div className="about-footer">
+          return "software that serves real business goals"
+        </div>
       </div>
 
       <div className="about-right">
@@ -122,7 +163,10 @@ export default function About() {
                 </div>
 
                 <div className="bar">
-                  <div className="fill" style={{ width: `${skill.val}%` }}></div>
+                  <div
+                    className="fill"
+                    style={{ width: `${skill.val}%` }}
+                  ></div>
                 </div>
               </div>
             ))}
