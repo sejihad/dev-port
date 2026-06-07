@@ -1,73 +1,73 @@
 import {
-  FaBrain,
-  FaChartLine,
-  FaDatabase,
-  FaExchangeAlt,
+  FaBullhorn,
+  FaCode,
+  FaMobileAlt,
   FaPlug,
-  FaRobot,
+  FaSearch,
+  FaShieldAlt,
 } from "react-icons/fa";
 import "./Services.css";
 
 export default function Services() {
   const services = [
     {
-      title: "Web Automation",
-      code: "def automate_task()",
-      desc: "Automate repetitive tasks, form submissions, and data entry with Python scripts that run 24/7.",
-      result: 'return "success=True"',
-      tech: ["Selenium", "Puppeteer", "Playwright"],
-      icon: <FaRobot size={32} />,
-      file: "web_automation.py",
+      title: "Full-Stack Web Development",
+      code: "const app = createWebPlatform()",
+      desc: "Modern, responsive, fast websites and web applications built with React.js, API integrations, dashboards, and business workflows.",
+      result: 'return "production-ready"',
+      tech: ["React.js", "JavaScript", "APIs"],
+      icon: <FaCode size={32} />,
+      file: "web_app.jsx",
       color: "blue",
     },
     {
-      title: "Data Scraping",
-      code: "def scrape_data()",
-      desc: "Extract valuable data from any website at scale. From e-commerce to social media, I handle it all.",
-      result: 'return "1M+ records"',
-      tech: ["Scrapy", "BeautifulSoup", "APIs"],
-      icon: <FaDatabase size={32} />,
-      file: "data_scraping.py",
-      color: "green",
-    },
-    {
-      title: "Data Analysis",
-      code: "def analyze()",
-      desc: "Transform raw data into actionable insights with advanced analytics and visualization.",
-      result: 'return "insights[]"',
-      tech: ["Pandas", "NumPy", "Matplotlib"],
-      icon: <FaChartLine size={32} />,
-      file: "data_analysis.py",
-      color: "purple",
-    },
-    {
-      title: "Machine Learning",
-      code: "def train_model()",
-      desc: "Build predictive models and AI solutions to automate decision-making and find patterns.",
-      result: 'return "accuracy=99%"',
-      tech: ["TensorFlow", "Scikit-learn", "PyTorch"],
-      icon: <FaBrain size={32} />,
-      file: "machine_learning.py",
-      color: "orange",
-    },
-    {
-      title: "API Development",
-      code: "def create_api()",
-      desc: "Create robust REST APIs and backend services to power your applications.",
-      result: 'return "status=200"',
-      tech: ["Django", "Flask", "FastAPI"],
-      icon: <FaPlug size={32} />,
-      file: "api_development.py",
+      title: "Mobile App Development",
+      code: "Widget buildApp()",
+      desc: "Cross-platform Android and iOS app interfaces, user flows, Firebase/API connections, and polished launch-ready builds.",
+      result: 'return "app launched"',
+      tech: ["Flutter", "Dart", "Firebase"],
+      icon: <FaMobileAlt size={32} />,
+      file: "mobile_app.dart",
       color: "cyan",
     },
     {
-      title: "ETL Pipelines",
-      code: "def run_pipeline()",
-      desc: "Design and implement data pipelines that extract, transform, and load data efficiently.",
-      result: 'return "complete ✓"',
-      tech: ["Airflow", "Luigi", "dbt"],
-      icon: <FaExchangeAlt size={32} />,
-      file: "etl_pipelines.py",
+      title: "Backend & Software Systems",
+      code: "public ApiResponse run()",
+      desc: "Custom backend logic, admin tools, database-driven systems, and automation scripts for growing business operations.",
+      result: 'return "stable backend"',
+      tech: ["Python", "Java", "MySQL"],
+      icon: <FaPlug size={32} />,
+      file: "backend_service.java",
+      color: "green",
+    },
+    {
+      title: "WordPress Business Websites",
+      code: "theme.renderBrand()",
+      desc: "Professional business sites, landing pages, service pages, speed optimization, plugins, and conversion-focused layouts.",
+      result: 'return "brand online"',
+      tech: ["WordPress", "Elementor", "SEO"],
+      icon: <FaSearch size={32} />,
+      file: "wordpress_theme.php",
+      color: "purple",
+    },
+    {
+      title: "Cybersecurity Review",
+      code: "def audit_surface():",
+      desc: "Practical security checks, ethical hacking mindset, vulnerability research, and safer deployment guidance for digital products.",
+      result: 'return "risk reduced"',
+      tech: ["Security", "Testing", "Hardening"],
+      icon: <FaShieldAlt size={32} />,
+      file: "security_audit.py",
+      color: "orange",
+    },
+    {
+      title: "Digital Marketing & IT Services",
+      code: "campaign.scale(reach)",
+      desc: "Digital NexGen-style business growth support across branding, ads, SEO, social presence, and complete IT service delivery.",
+      result: 'return "business growth"',
+      tech: ["SEO", "Ads", "Strategy"],
+      icon: <FaBullhorn size={32} />,
+      file: "growth_strategy.js",
       color: "red",
     },
   ];
@@ -75,18 +75,16 @@ export default function Services() {
   return (
     <section className="services" id="services">
       <div className="services-container">
-        {/* HEADER */}
         <div className="services-header">
           <div className="badge">
             <span className="prompt">$</span> class Services:
           </div>
           <h2>
-            What I <span className="gradient">Build</span>
+            What Rayhan <span className="gradient">Builds</span>
           </h2>
-          <p># Turning complex problems into elegant solutions</p>
+          <p># Websites, mobile apps, software systems, security, and growth</p>
         </div>
 
-        {/* CARDS GRID */}
         <div className="services-grid">
           {services.map((s, index) => (
             <div
@@ -94,7 +92,6 @@ export default function Services() {
               key={s.title}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* TOP BAR */}
               <div className="card-topbar">
                 <div className="dots">
                   <span />
@@ -103,13 +100,12 @@ export default function Services() {
                 </div>
                 <span className="file">{s.file}</span>
                 <div className="topbar-icons">
-                  <span>✕</span>
-                  <span>─</span>
-                  <span>□</span>
+                  <span>x</span>
+                  <span>-</span>
+                  <span>[]</span>
                 </div>
               </div>
 
-              {/* CONTENT */}
               <div className="card-body">
                 <div className="icon-wrapper">
                   <div className="icon">{s.icon}</div>
@@ -117,13 +113,13 @@ export default function Services() {
 
                 <h3>{s.title}</h3>
                 <p className="code-line">
-                  <span className="keyword">def</span> {s.code}:
+                  <span className="keyword">run</span> {s.code};
                 </p>
 
                 <p className="desc">{s.desc}</p>
 
                 <div className="result-box">
-                  <span className="result-arrow">→</span>
+                  <span className="result-arrow">-&gt;</span>
                   <span className="result">{s.result}</span>
                 </div>
 
@@ -137,19 +133,18 @@ export default function Services() {
           ))}
         </div>
 
-        {/* BOTTOM TERMINAL */}
         <div className="services-terminal">
           <div className="terminal-line">
             <span className="prompt">$</span>
-            <span className="command">python deploy_services.py --all</span>
+            <span className="command">python deploy_services.py --business-ready</span>
           </div>
           <div className="terminal-line success">
-            <span className="arrow">✔</span>
-            <span>6 services deployed successfully</span>
+            <span className="arrow">OK</span>
+            <span>6 service modules prepared for client projects</span>
           </div>
           <div className="terminal-line typing">
             <span className="prompt">$</span>
-            <span className="command">Ready to automate your business</span>
+            <span className="command">Ready to build your next digital product</span>
             <span className="cursor"></span>
           </div>
         </div>

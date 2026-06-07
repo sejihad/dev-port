@@ -1,132 +1,84 @@
 import {
-  FaChartBar,
+  FaBullhorn,
   FaChartLine,
+  FaCode,
   FaDatabase,
-  FaFilm,
-  FaHeartbeat,
-  FaPlane,
-  FaRobot,
-  FaSearch,
-  FaUsers,
+  FaMobileAlt,
+  FaShieldAlt,
 } from "react-icons/fa";
 import "./Portfolio.css";
 
 export default function Portfolio() {
   const projects = [
     {
-      title: "Real Estate API Platform",
-      file: "real_estate_api.py",
-      code: ">>> api.get('/properties')",
-      desc: "Complete REST API for property listings, agent management, and automated valuation models with ML-powered price predictions.",
-      result: "50K+ listings",
-      stats: "50K+",
-      statsLabel: "Listings",
-      tech: ["FastAPI", "PostgreSQL", "Redis"],
-      icon: <FaChartLine size={28} />,
+      title: "Business Website Platform",
+      file: "business_site.jsx",
+      code: "render(<BusinessWebsite />)",
+      desc: "A responsive React-based company website system with service pages, lead capture sections, fast loading, and conversion-focused UI.",
+      stats: "React",
+      statsLabel: "Frontend",
+      tech: ["React.js", "JavaScript", "SEO"],
+      icon: <FaCode size={28} />,
       color: "blue",
       gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)",
     },
     {
-      title: "Social Media Analytics Dashboard",
-      file: "social_analytics.py",
-      code: ">>> analyze_sentiment(posts)",
-      desc: "Real-time sentiment analysis and engagement tracking across Twitter, Instagram, and LinkedIn with automated reporting.",
-      result: "1M+ posts analyzed",
-      stats: "1M+",
-      statsLabel: "Posts Analyzed",
-      tech: ["Python", "Plotly", "NLP"],
-      icon: <FaRobot size={28} />,
-      color: "purple",
-      gradient: "linear-gradient(135deg, #a855f7, #ec4899)",
-    },
-    {
-      title: "E-commerce Price Intelligence",
-      file: "price_scraper.py",
-      code: ">>> scraper.crawl(urls)",
-      desc: "Automated competitor price monitoring across 500+ retailers with dynamic pricing recommendations.",
-      result: "2M products tracked",
-      stats: "2M+",
-      statsLabel: "Products Tracked",
-      tech: ["Scrapy", "MongoDB", "Celery"],
-      icon: <FaSearch size={28} />,
-      color: "green",
-      gradient: "linear-gradient(135deg, #22c55e, #14b8a6)",
-    },
-    {
-      title: "HR Recruitment Automation",
-      file: "hr_automation.py",
-      code: ">>> match_candidates(job)",
-      desc: "AI-powered resume screening, candidate matching, and interview scheduling system with LinkedIn integration.",
-      result: "10K+ hires facilitated",
-      stats: "10K+",
-      statsLabel: "Hires Facilitated",
-      tech: ["Django", "OpenAI", "Selenium"],
-      icon: <FaUsers size={28} />,
-      color: "orange",
-      gradient: "linear-gradient(135deg, #f97316, #facc15)",
-    },
-    {
-      title: "Healthcare Data Pipeline",
-      file: "healthcare_pipeline.py",
-      code: ">>> pipeline.run(batch)",
-      desc: "HIPAA-compliant ETL system processing patient records, lab results, and insurance claims for analytics.",
-      result: "5M records/day",
-      stats: "5M+",
-      statsLabel: "Records/Day",
-      tech: ["Airflow", "Spark", "AWS"],
-      icon: <FaHeartbeat size={28} />,
-      color: "red",
-      gradient: "linear-gradient(135deg, #ef4444, #f97316)",
-    },
-    {
-      title: "Travel Booking Aggregator",
-      file: "travel_aggregator.py",
-      code: ">>> await fetch_prices()",
-      desc: "Multi-source flight and hotel comparison API aggregating prices from 100+ travel providers in real-time.",
-      result: "100+ providers",
-      stats: "100+",
-      statsLabel: "Providers",
-      tech: ["FastAPI", "AsyncIO", "GraphQL"],
-      icon: <FaPlane size={28} />,
+      title: "Flutter Service App",
+      file: "sohoz_point_app.dart",
+      code: "Navigator.push(context, ServiceFlow())",
+      desc: "A mobile-first app concept for service discovery, customer requests, booking flows, and smooth cross-platform user experience.",
+      stats: "Flutter",
+      statsLabel: "Mobile",
+      tech: ["Flutter", "Dart", "Firebase"],
+      icon: <FaMobileAlt size={28} />,
       color: "cyan",
       gradient: "linear-gradient(135deg, #06b6d4, #22d3ee)",
     },
     {
-      title: "Streaming Platform Analytics",
-      file: "streaming_analytics.py",
-      code: ">>> model.predict(user)",
-      desc: "User behavior tracking, content recommendation engine, and viewership prediction for OTT platforms.",
-      result: "99.5% accuracy",
-      stats: "99.5%",
-      statsLabel: "Accuracy",
-      tech: ["TensorFlow", "Kafka", "Redis"],
-      icon: <FaFilm size={28} />,
-      color: "pink",
-      gradient: "linear-gradient(135deg, #ec4899, #c084fc)",
+      title: "Agency Growth Dashboard",
+      file: "growth_dashboard.js",
+      code: "campaigns.map(trackROI)",
+      desc: "A dashboard concept for Digital NexGen to track campaigns, leads, conversions, content performance, and client reporting.",
+      stats: "ROI",
+      statsLabel: "Tracking",
+      tech: ["JavaScript", "Charts", "Marketing"],
+      icon: <FaChartLine size={28} />,
+      color: "green",
+      gradient: "linear-gradient(135deg, #22c55e, #14b8a6)",
     },
     {
-      title: "Music Rights Management",
-      file: "music_royalties.py",
-      code: ">>> distribute_royalties()",
-      desc: "Automated royalty tracking, copyright detection, and payment distribution system for music publishers.",
-      result: "$10M+ distributed",
-      stats: "$10M+",
-      statsLabel: "Distributed",
-      tech: ["Python", "Blockchain", "APIs"],
+      title: "Secure Backend API",
+      file: "SecureApi.java",
+      code: "return ResponseEntity.ok(payload);",
+      desc: "A Java-style backend architecture for authenticated requests, role-based access, structured APIs, and reliable business data handling.",
+      stats: "Java",
+      statsLabel: "Backend",
+      tech: ["Java", "REST API", "MySQL"],
       icon: <FaDatabase size={28} />,
-      color: "indigo",
-      gradient: "linear-gradient(135deg, #6366f1, #a855f7)",
+      color: "orange",
+      gradient: "linear-gradient(135deg, #f97316, #facc15)",
     },
     {
-      title: "Financial Market Scanner",
-      file: "market_scanner.py",
-      code: ">>> scanner.find_signals()",
-      desc: "Real-time stock screener with technical indicators, pattern recognition, and automated alert system.",
-      result: "5K+ stocks monitored",
-      stats: "5K+",
-      statsLabel: "Stocks Monitored",
-      tech: ["Python", "WebSocket", "TA-Lib"],
-      icon: <FaChartBar size={28} />,
+      title: "Security Audit Toolkit",
+      file: "security_scan.py",
+      code: "findings = audit(target)",
+      desc: "A Python-based security review workflow for checking exposed surfaces, weak configurations, and safer deployment practices.",
+      stats: "Audit",
+      statsLabel: "Security",
+      tech: ["Python", "Testing", "Hardening"],
+      icon: <FaShieldAlt size={28} />,
+      color: "purple",
+      gradient: "linear-gradient(135deg, #a855f7, #ec4899)",
+    },
+    {
+      title: "WordPress Lead Website",
+      file: "wordpress_theme.php",
+      code: "get_template_part('services')",
+      desc: "A polished WordPress business website with service structure, brand presentation, contact sections, and search-friendly pages.",
+      stats: "WP",
+      statsLabel: "CMS",
+      tech: ["WordPress", "Elementor", "SEO"],
+      icon: <FaBullhorn size={28} />,
       color: "teal",
       gradient: "linear-gradient(135deg, #14b8a6, #2dd4bf)",
     },
@@ -135,22 +87,17 @@ export default function Portfolio() {
   return (
     <section className="portfolio" id="portfolio">
       <div className="portfolio-container">
-        {/* HEADER */}
         <div className="portfolio-header">
           <div className="badge">
-            <span className="prompt">from</span> portfolio{" "}
-            <span className="prompt">import</span> *
+            <span className="prompt">from</span> rayhan_portfolio{" "}
+            <span className="prompt">import</span> projects
           </div>
           <h2>
-            Featured <span className="gradient">Projects</span>
+            Featured <span className="gradient">Work</span>
           </h2>
-          <p>
-            # A collection of projects spanning automation, data engineering,
-            and AI
-          </p>
+          <p># Practical web, app, backend, CMS, marketing, and security builds</p>
         </div>
 
-        {/* PROJECTS GRID */}
         <div className="portfolio-grid">
           {projects.map((project, index) => (
             <div
@@ -158,7 +105,6 @@ export default function Portfolio() {
               key={project.title}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              {/* CARD HEADER */}
               <div className="project-header">
                 <div className="file-info">
                   <div className="dots">
@@ -174,12 +120,8 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* CARD BODY */}
               <div className="project-body">
-                <div
-                  className="icon-bg"
-                  style={{ background: project.gradient }}
-                >
+                <div className="icon-bg" style={{ background: project.gradient }}>
                   <div className="project-icon">{project.icon}</div>
                 </div>
 
@@ -198,36 +140,26 @@ export default function Portfolio() {
                     </span>
                   ))}
                 </div>
-
-                {/* <div className="project-footer">
-                  <button className="view-btn">
-                    View Project <span className="arrow">→</span>
-                  </button>
-                </div> */}
               </div>
             </div>
           ))}
         </div>
 
-        {/* BOTTOM CTA */}
-        {/* COMING SOON */}
         <div className="coming-soon">
           <div className="terminal-loader">
             <div className="loader-header">
               <span className="prompt">$</span>
-              <span className="command">git push origin main</span>
+              <span className="command">git push origin rayhan/full-stack</span>
             </div>
             <div className="loader-content">
               <div className="spinner"></div>
               <div className="loader-text">
-                <span className="typing-text">
-                  More projects coming soon...
-                </span>
-                <span className="cursor-blink">█</span>
+                <span className="typing-text">More client work loading...</span>
+                <span className="cursor-blink">|</span>
               </div>
             </div>
             <div className="loader-footer">
-              <span className="status">🚀 Building amazing things...</span>
+              <span className="status">Building websites, apps, and digital systems.</span>
             </div>
           </div>
         </div>

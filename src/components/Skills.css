@@ -39,7 +39,7 @@
   font-weight: 700;
   color: var(--text-primary, #ffffff);
   margin-bottom: 16px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .skills-header .gradient-text {

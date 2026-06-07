@@ -92,7 +92,7 @@ ul li a {
   font-size: 18px;
   font-weight: 700;
   color: #0a0a12;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }

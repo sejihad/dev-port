@@ -28,7 +28,6 @@ export default function ThemeToggle() {
           >
             <FaMoon />
             <span>Dark Theme</span>
-            <span className="theme-preview dark-preview"></span>
           </button>
 
           <button
@@ -40,7 +39,6 @@ export default function ThemeToggle() {
           >
             <FaSun />
             <span>Orange Theme</span>
-            <span className="theme-preview orange-preview"></span>
           </button>
         </div>
       )}

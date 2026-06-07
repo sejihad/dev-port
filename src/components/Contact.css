@@ -45,7 +45,7 @@
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
   margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--text-primary, white);
 }
 

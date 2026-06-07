@@ -6,6 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 const NAV_LINKS = [
   "Home",
   "About",
+  "Skills",
   "Services",
   "Portfolio",
   "MD Rayhan",
@@ -25,32 +26,29 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Check if we're on home page
   const isHomePage = location.pathname === "/";
 
   const scrollTo = (id) => {
+    const targetId = id.toLowerCase().replace(" ", "-");
+
     if (isHomePage) {
-      const el = document.getElementById(id.toLowerCase().replace(" ", "-"));
+      const el = document.getElementById(targetId);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
-      // If not on home page, navigate to home first then scroll
       navigate("/");
       setTimeout(() => {
-        const el = document.getElementById(id.toLowerCase().replace(" ", "-"));
+        const el = document.getElementById(targetId);
         if (el) el.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
+
     setActive(id);
     setMenuOpen(false);
   };
 
   const handleLogoClick = () => {
-    if (isHomePage) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      navigate("/");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    if (!isHomePage) navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setActive("Home");
     setMenuOpen(false);
   };
@@ -71,31 +69,21 @@ export default function Header() {
     <>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="header-container">
-          {/* LOGO - React Router Link */}
           <Link to="/" className="logo" onClick={handleLogoClick}>
             <div className="logo-icon">&gt;_</div>
             <div className="logo-text">
-              <span className="logo-name">MD Rayhan</span>
-              <span className="logo-sub">Software Developer</span>
+              <span className="logo-name">Rayhan Rokon</span>
+              <span className="logo-sub">Full-Stack Developer</span>
             </div>
           </Link>
 
-          {/* DESKTOP NAV */}
           <nav>
             <ul className="nav">
               {NAV_LINKS.map((link) => (
                 <li key={link}>
-                  {link === "Home" ? (
+                  {link === "Home" || link === "MD Rayhan" ? (
                     <Link
-                      to="/"
-                      className={`nav-btn ${active === link ? "active" : ""}`}
-                      onClick={() => handleNavClick(link)}
-                    >
-                      {link}
-                    </Link>
-                  ) : link === "MD Rayhan" ? (
-                    <Link
-                      to="/about"
+                      to={link === "Home" ? "/" : "/about"}
                       className={`nav-btn ${active === link ? "active" : ""}`}
                       onClick={() => handleNavClick(link)}
                     >
@@ -114,17 +102,13 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* RIGHT GROUP */}
           <div className="right-group">
-            {/* Theme Toggle - সরাসরি এখানে */}
             <ThemeToggle />
 
-            {/* Hire Me */}
             <button className="hire-btn" onClick={() => scrollTo("Contact")}>
               Hire Me
             </button>
 
-            {/* Hamburger */}
             <button
               className={`hamburger ${menuOpen ? "open" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}
@@ -138,7 +122,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="mobile-menu">
           {NAV_LINKS.map((link) => (
@@ -156,7 +139,6 @@ export default function Header() {
         </div>
       )}
 
-      {/* spacer so content doesn't hide behind fixed header */}
       <div style={{ height: 68 }} />
     </>
   );

@@ -20,7 +20,6 @@ export default function Error() {
       setGlitchText((prev) => (prev === "404" ? "!!ERROR!!" : "404"));
     }, 5000);
 
-    // Countdown timer
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
@@ -28,6 +27,7 @@ export default function Error() {
           navigate("/");
           return 0;
         }
+
         return prev - 1;
       });
     }, 1000);
@@ -38,18 +38,9 @@ export default function Error() {
     };
   }, [navigate]);
 
-  const goBack = () => {
-    navigate(-1);
-  };
-
-  const goHome = () => {
-    navigate("/");
-  };
-
   return (
     <div className="error-page">
       <div className="error-container">
-        {/* TERMINAL WINDOW */}
         <div className="error-terminal">
           <div className="terminal-header">
             <div className="dots">
@@ -57,16 +48,15 @@ export default function Error() {
               <span></span>
               <span></span>
             </div>
-            <span className="terminal-title">error.log — Page Not Found</span>
+            <span className="terminal-title">error.log - Page Not Found</span>
             <div className="terminal-icons">
-              <span>✕</span>
-              <span>─</span>
-              <span>□</span>
+              <span>x</span>
+              <span>-</span>
+              <span>[]</span>
             </div>
           </div>
 
           <div className="terminal-body">
-            {/* GLITCH TEXT */}
             <div className="glitch-wrapper">
               <h1 className="glitch-text" data-text={glitchText}>
                 {glitchText}
@@ -81,17 +71,16 @@ export default function Error() {
                 <span className="command">find / --name="requested_page"</span>
               </p>
               <p className="error-output">
-                <span className="error-symbol">✖</span>
-                Error: The page you're looking for doesn't exist or has been
+                <span className="error-symbol">x</span>
+                Error: The page you are looking for does not exist or has been
                 moved.
               </p>
               <p className="error-suggestion">
-                <span className="arrow">→</span>
+                <span className="arrow">-&gt;</span>
                 Try checking the URL or navigate back to home.
               </p>
             </div>
 
-            {/* CODE BLOCK */}
             <div className="error-code-block">
               <pre>
                 <code>
@@ -111,19 +100,17 @@ export default function Error() {
               </pre>
             </div>
 
-            {/* BUTTONS */}
             <div className="error-buttons">
-              <button className="error-btn back-btn" onClick={goBack}>
+              <button className="error-btn back-btn" onClick={() => navigate(-1)}>
                 <FaArrowLeft className="btn-icon" />
                 Go Back
               </button>
-              <button className="error-btn home-btn" onClick={goHome}>
+              <button className="error-btn home-btn" onClick={() => navigate("/")}>
                 <FaHome className="btn-icon" />
                 Home Page
               </button>
             </div>
 
-            {/* COUNTDOWN */}
             <div className="countdown">
               <span className="countdown-text">
                 Redirecting to homepage in
@@ -138,7 +125,6 @@ export default function Error() {
               </div>
             </div>
 
-            {/* STATUS - সঠিক icon সহ */}
             <div className="error-status">
               <div className="status-item">
                 <FaBug className="status-icon" />
@@ -146,7 +132,7 @@ export default function Error() {
               </div>
               <div className="status-item">
                 <FaExclamationTriangle className="status-icon" />
-                <span>AI Suggestion: Check URL</span>
+                <span>Suggestion: Check URL</span>
               </div>
               <div className="status-item">
                 <FaCode className="status-icon" />

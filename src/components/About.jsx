@@ -4,42 +4,41 @@ import "./About.css";
 export default function About() {
   const skills = [
     {
-      key: "python_skills",
-      label: "Python & Automation",
-      val: 95,
+      key: "frontend",
+      label: "React.js, JavaScript, responsive interfaces",
+      val: 94,
     },
     {
-      key: "scraping_exp",
-      label: "Web Scraping (Scrapy, Selenium)",
-      val: 93,
+      key: "mobile_apps",
+      label: "Flutter app development",
+      val: 90,
     },
     {
-      key: "data_science",
-      label: "Data Science & Analytics",
+      key: "backend",
+      label: "Python, Java, APIs, database logic",
       val: 88,
     },
     {
-      key: "ml_expertise",
-      label: "Machine Learning",
-      val: 82,
+      key: "cms",
+      label: "WordPress and business websites",
+      val: 92,
     },
     {
-      key: "web_frameworks",
-      label: "Django & Flask",
-      val: 85,
+      key: "security",
+      label: "Ethical hacking and vulnerability research",
+      val: 86,
     },
   ];
 
   return (
     <section className="about" id="about">
-      {/* LEFT */}
       <div className="about-left">
         <div className="about-top">
-          <div className="about-badge">def about_me():</div>
+          <div className="about-badge">def about_rayhan():</div>
         </div>
 
         <h2 className="about-title">
-          Python Developer & <span>Data Enthusiast</span>
+          Founder, Developer & <span>Digital Problem Solver</span>
         </h2>
 
         <div className="code-box">
@@ -54,74 +53,60 @@ export default function About() {
 
           <pre className="code">
             <span className="keyword">class</span>{" "}
-            <span className="class-name">Developer</span>:{"\n    "}
-            <span className="property">name</span> ={" "}
-            <span className="string">"Kawsar Ahmed"</span>
-            {"\n    "}
+            <span className="class-name">RayhanIslamRokon</span>:{"\n    "}
             <span className="property">location</span> ={" "}
-            <span className="string">"Dhaka, Bangladesh"</span>
+            <span className="string">"Gazipur, Bangladesh"</span>
             {"\n    "}
-            <span className="property">skills</span> ={" "}
-            <span className="array">["Python", "Automation"]</span>
+            <span className="property">companies</span> ={" "}
+            <span className="array">["Digital NexGen", "Sohoz Point"]</span>
+            {"\n    "}
+            <span className="property">mission</span> ={" "}
+            <span className="string">"build practical digital solutions"</span>
           </pre>
         </div>
 
         <p className="about-text">
-          From building custom web scrapers that collect millions of data points
-          to creating automated workflows that save hundreds of hours, I turn
-          complex data challenges into elegant solutions.
+          Rayhan Islam Rokon is a Bangladeshi tech entrepreneur, full-stack
+          developer, app developer, and digital marketer. As Founder and CEO of
+          Digital NexGen and Sohoz Point, he focuses on helping businesses move
+          faster with modern websites, mobile apps, software systems, IT
+          services, digital marketing, and secure technology practices.
         </p>
 
         <div className="about-actions">
-          <button className="resume-btn">⬇ Download Resume</button>
+          <button className="resume-btn">Download Resume</button>
 
           <div className="socials">
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
 
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
               <FaLinkedinIn />
             </a>
 
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://twitter.com/" target="_blank" rel="noreferrer">
               <FaTwitter />
             </a>
           </div>
         </div>
 
-        <div className="about-footer">
-          return "let's build something amazing!"
-        </div>
+        <div className="about-footer">return "software that serves real business goals"</div>
       </div>
 
-      {/* RIGHT */}
       <div className="about-right">
         <div className="skills-box">
-          {/* header */}
           <div className="skills-header">
             <div className="dots">
               <span />
               <span />
               <span />
             </div>
-            <span className="file-name">skills.py</span>
+            <span className="file-name">expertise.py</span>
           </div>
 
           <div className="skills-content">
-            <p className="class-title">class TechnicalSkills:</p>
+            <p className="class-title">class ProfessionalExpertise:</p>
 
             {skills.map((skill) => (
               <div key={skill.key} className="skill-block">
@@ -137,10 +122,7 @@ export default function About() {
                 </div>
 
                 <div className="bar">
-                  <div
-                    className="fill"
-                    style={{ width: `${skill.val}%` }}
-                  ></div>
+                  <div className="fill" style={{ width: `${skill.val}%` }}></div>
                 </div>
               </div>
             ))}

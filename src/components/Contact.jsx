@@ -22,45 +22,44 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Message sent successfully! I'll get back to you soon.");
+    alert("Message sent successfully. Rayhan will get back to you soon.");
     setFormData({ name: "", email: "", projectType: "", message: "" });
   };
 
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        {/* HEADER */}
         <div className="contact-header">
           <div className="badge">
-            <span className="prompt">$</span> echo "Let's Connect"
+            <span className="prompt">$</span> echo "Let's Build"
           </div>
           <h2>
-            Let's <span className="gradient">Build Together</span>
+            Start a <span className="gradient">Project</span>
           </h2>
           <p>
-            Ready to transform your ideas into powerful automation solutions?
+            Need a website, mobile app, software system, security review, or
+            digital growth plan?
           </p>
         </div>
 
         <div className="contact-wrapper">
-          {/* LEFT SIDE */}
           <div className="contact-left">
             <div className="left-content">
-              <h3>Got a project in mind?</h3>
+              <h3>Tell Rayhan what you want to build.</h3>
               <p className="description">
-                Whether you need a web scraper, automation system, or data
-                pipeline — I'm here to help turn your ideas into reality.
+                Share your project goal, preferred technology, timeline, and
+                budget range. Rayhan can help turn the idea into a practical
+                product plan and production-ready build.
               </p>
 
-              {/* INFO CARDS */}
               <div className="contact-cards">
                 <div className="info-card">
                   <div className="icon-wrapper">
                     <FaEnvelope className="card-icon" />
                   </div>
                   <div className="card-info">
-                    <p>Email me at</p>
-                    <h4>kawsar@kawsarlog.com</h4>
+                    <p>Email</p>
+                    <h4>Available on request</h4>
                   </div>
                 </div>
 
@@ -71,7 +70,7 @@ export default function Contact() {
                   <div className="card-info">
                     <p>Based in</p>
                     <h4>
-                      Dhaka, Bangladesh{" "}
+                      Gazipur, Bangladesh{" "}
                       <span className="remote">(Remote Worldwide)</span>
                     </h4>
                   </div>
@@ -82,32 +81,18 @@ export default function Contact() {
                     <FaClock className="card-icon" />
                   </div>
                   <div className="card-info">
-                    <p>Response time</p>
-                    <h4 className="green">Usually within 24 hours</h4>
+                    <p>Focus</p>
+                    <h4 className="green">Web, apps, IT, and digital growth</h4>
                   </div>
                 </div>
               </div>
-
-              {/* SOCIAL LINKS */}
-              {/* <div className="social-links">
-                <a href="#" className="social-icon">
-                  <FaGithub />
-                </a>
-                <a href="#" className="social-icon">
-                  <FaLinkedin />
-                </a>
-                <a href="#" className="social-icon">
-                  <FaTwitter />
-                </a>
-              </div> */}
             </div>
           </div>
 
-          {/* RIGHT SIDE FORM */}
           <div className="contact-right">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-header">
-                <span className="form-badge">✉️ Send a message</span>
+                <span className="form-badge">Send a message</span>
               </div>
 
               <div className="form-row">
@@ -116,7 +101,7 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="Your name"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -129,7 +114,7 @@ export default function Contact() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="john@example.com"
+                    placeholder="you@example.com"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -146,12 +131,12 @@ export default function Contact() {
                   onChange={handleChange}
                 >
                   <option value="">Select a project type</option>
-                  <option value="Web Automation">Web Automation</option>
-                  <option value="Data Scraping">Data Scraping</option>
-                  <option value="Data Analysis">Data Analysis</option>
-                  <option value="Machine Learning">Machine Learning</option>
-                  <option value="API Development">API Development</option>
-                  <option value="ETL Pipeline">ETL Pipeline</option>
+                  <option value="Full-Stack Website">Full-Stack Website</option>
+                  <option value="Mobile App">Mobile App</option>
+                  <option value="Software System">Software System</option>
+                  <option value="WordPress Website">WordPress Website</option>
+                  <option value="Cybersecurity Review">Cybersecurity Review</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
                 </select>
                 <span className="input-border"></span>
               </div>
@@ -160,7 +145,7 @@ export default function Contact() {
                 <label>Project Details</label>
                 <textarea
                   name="message"
-                  placeholder="Tell me about your project, timeline, and budget..."
+                  placeholder="Tell me about your idea, users, features, timeline, and budget..."
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -171,7 +156,7 @@ export default function Contact() {
               <button type="submit" className="submit-btn">
                 <FaPaperPlane className="btn-icon" />
                 Send Message
-                <span className="btn-arrow">→</span>
+                <span className="btn-arrow">-&gt;</span>
               </button>
             </form>
           </div>

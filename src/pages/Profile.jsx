@@ -7,43 +7,37 @@ import {
   FaGithub,
   FaGlobe,
   FaLinkedinIn,
+  FaShieldAlt,
   FaStar,
   FaTwitter,
 } from "react-icons/fa";
-import { SiDjango, SiPython } from "react-icons/si";
+import { SiFlutter, SiJavascript, SiPython, SiReact, SiWordpress } from "react-icons/si";
 import profilePic from "../assets/profile.jpg";
 import "./Intro.css";
 
-export default function Intro() {
+export default function Profile() {
   const [typedText, setTypedText] = useState("");
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullText = "I architect digital automatons.";
+  const fullText = "I build websites, apps, software systems, and digital growth engines.";
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isTypingComplete = currentIndex >= fullText.length;
 
   useEffect(() => {
     if (currentIndex < fullText.length) {
       const timeout = setTimeout(() => {
         setTypedText((prev) => prev + fullText[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
-      }, 50);
+      }, 45);
       return () => clearTimeout(timeout);
-    } else {
-      setIsTypingComplete(true);
     }
-  }, [currentIndex]);
+  }, [currentIndex, fullText]);
 
-  // Smooth scroll to contact
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.location.href = "/#contact";
   };
 
   return (
     <section className="intro" id="about">
       <div className="intro-container">
-        {/* LEFT IMAGE */}
         <div className="intro-left">
           <div className="image-box">
             <div className="image-header">
@@ -52,94 +46,98 @@ export default function Intro() {
                 <span />
                 <span />
               </div>
-              <span className="image-title">profile.jpg</span>
+              <span className="image-title">rayhan-profile.jpg</span>
               <div className="header-icons">
-                <span>✕</span>
-                <span>─</span>
-                <span>□</span>
+                <span>x</span>
+                <span>-</span>
+                <span>[]</span>
               </div>
             </div>
             <div className="image-wrapper">
-              <img src={profilePic} alt="MD Rayhan" />
+              <img src={profilePic} alt="Rayhan Islam Rokon" />
               <div className="image-overlay"></div>
               <div className="tech-badges">
                 <span className="tech-badge">
-                  <SiPython /> Python
+                  <SiReact /> React
                 </span>
                 <span className="tech-badge">
-                  <SiDjango /> Django
+                  <SiFlutter /> Flutter
                 </span>
               </div>
             </div>
             <div className="image-footer">
               <span className="status-dot"></span>
-              <span className="status-text">Available for work</span>
+              <span className="status-text">Available for projects</span>
               <span className="location-text">
-                <FaGlobe /> Dhaka, BD
+                <FaGlobe /> Gazipur, BD
               </span>
             </div>
           </div>
         </div>
 
-        {/* RIGHT CONTENT */}
         <div className="intro-right">
           <div className="top-line">
             <div className="terminal-prompt">
               <span className="prompt-sign">&gt;_</span>
-              <span className="prompt-text">SYSTEM: ONLINE</span>
+              <span className="prompt-text">FOUNDER PROFILE</span>
             </div>
             <div className="badge">
               <span className="badge-icon">
                 <FaStar />
               </span>
-              <span>Python Developer</span>
+              <span>Full-Stack Developer</span>
             </div>
           </div>
 
           <h1>
-            MD <span className="gradient-name">Rayhan</span>
+            Rayhan Islam <span className="gradient-name">Rokon</span>
           </h1>
 
-          {/* TAGS */}
           <div className="tags">
             <span className="tag">
-              <SiPython className="tag-icon" /> PYTHON ARCHITECT
+              <SiReact className="tag-icon" /> REACT.JS
             </span>
             <span className="tag">
-              <FaBolt className="tag-icon" /> AUTOMATION EXPERT
+              <SiFlutter className="tag-icon" /> FLUTTER APPS
             </span>
             <span className="tag">
-              <FaCode className="tag-icon" /> DATA ENGINEER
+              <SiJavascript className="tag-icon" /> JAVASCRIPT
+            </span>
+            <span className="tag">
+              <SiPython className="tag-icon" /> PYTHON
+            </span>
+            <span className="tag">
+              <SiWordpress className="tag-icon" /> WORDPRESS
             </span>
           </div>
 
-          {/* DESCRIPTION */}
           <div className="desc-box">
             <div className="desc-header">
               <span className="quote-icon">"</span>
-              <span className="desc-title">about.py</span>
-              <span className="desc-version">v2.0.0</span>
+              <span className="desc-title">professional_bio.js</span>
+              <span className="desc-version">v3.0.0</span>
             </div>
             <p className="typed-line">
               {typedText}
-              {!isTypingComplete && <span className="cursor-blink">█</span>}
+              {!isTypingComplete && <span className="cursor-blink">|</span>}
             </p>
             <p className="desc-continue">
-              From intricate web scrapers harvesting millions of data points to
-              autonomous agents that work eternally. I turn chaos into
-              structured data and repetitive toil into specialized algorithms.
+              Rayhan is a tech entrepreneur based in Gazipur, Bangladesh. He is
+              the Founder and CEO of Digital NexGen and Sohoz Point, working
+              across web development, app development, digital marketing, IT
+              services, and ethical security research. He studied at Model
+              Institute of Science & Technology (MIST).
             </p>
           </div>
 
-          {/* STATS */}
           <div className="stats">
             <div className="stat-card">
               <div className="stat-icon">
                 <FaCode />
               </div>
               <div className="stat-info">
-                <h3 className="counter">1500+</h3>
-                <p>PROJECTS</p>
+                <h3 className="counter">Full</h3>
+                <p>STACK</p>
               </div>
             </div>
 
@@ -148,27 +146,26 @@ export default function Intro() {
                 <FaBolt />
               </div>
               <div className="stat-info">
-                <h3 className="counter">99.9%</h3>
-                <p>EFFICIENCY</p>
+                <h3 className="counter">CEO</h3>
+                <p>FOUNDER</p>
               </div>
             </div>
 
             <div className="stat-card">
               <div className="stat-icon">
-                <FaGlobe />
+                <FaShieldAlt />
               </div>
               <div className="stat-info">
-                <h3 className="counter">24/7</h3>
-                <p>AVAILABLE</p>
+                <h3 className="counter">Sec</h3>
+                <p>RESEARCH</p>
               </div>
             </div>
           </div>
 
-          {/* BUTTONS */}
           <div className="action-buttons">
             <button className="cta-primary" onClick={scrollToContact}>
-              <span>Initiate Protocol</span>
-              <span className="button-arrow">→</span>
+              <span>Start Project</span>
+              <span className="button-arrow">-&gt;</span>
             </button>
             <button className="cta-secondary">
               <FaDownload className="btn-icon" />
@@ -176,31 +173,37 @@ export default function Intro() {
             </button>
           </div>
 
-          {/* LINKS */}
           <div className="links">
             <div className="links-header">
               <span className="links-icon">//</span>
-              <span className="links-title">LINKED_SYSTEMS</span>
-              <span className="links-count">(3)</span>
+              <span className="links-title">VENTURES_AND_FOCUS</span>
+              <span className="links-count">(5)</span>
             </div>
 
             <div className="chips">
               <span className="chip">
                 <span className="chip-dot"></span>
-                TocoLabs
+                Digital NexGen
               </span>
               <span className="chip">
                 <span className="chip-dot"></span>
-                Bigibyte
+                Sohoz Point
               </span>
               <span className="chip">
                 <span className="chip-dot"></span>
-                Size Chart Maker
+                Web Development
+              </span>
+              <span className="chip">
+                <span className="chip-dot"></span>
+                App Development
+              </span>
+              <span className="chip">
+                <span className="chip-dot"></span>
+                Digital Marketing
               </span>
             </div>
           </div>
 
-          {/* SOCIAL */}
           <div className="socials">
             <a
               href="https://github.com"
@@ -227,7 +230,7 @@ export default function Intro() {
               <FaTwitter />
             </a>
             <a
-              href="mailto:rayhan@example.com"
+              href="mailto:hello@example.com"
               className="social-link"
               target="_blank"
               rel="noopener noreferrer"

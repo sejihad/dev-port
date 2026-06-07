@@ -1,93 +1,90 @@
 import "./Skills.css";
 
-import { FaAward, FaBook, FaLaptopCode, FaRocket } from "react-icons/fa";
+import { FaAward, FaBook, FaBullhorn, FaJava, FaLaptopCode } from "react-icons/fa";
 import {
-  SiDjango,
-  SiFastapi,
-  SiPandas,
-  SiPostgresql,
+  SiFlutter,
+  SiJavascript,
+  SiMysql,
   SiPython,
-  SiScrapy,
-  SiSelenium,
-  SiTensorflow,
+  SiReact,
+  SiWordpress,
 } from "react-icons/si";
+
 export default function Skills() {
   const skills = [
     {
-      name: "Python",
-      sub: "$ import automation as magic",
-      val: 95,
+      name: "React.js",
+      sub: "const ui = buildResponsiveExperience();",
+      val: 94,
+      color: "cyan",
+      icon: <SiReact size={32} />,
+    },
+    {
+      name: "Flutter",
+      sub: "Widget app = launchCrossPlatform();",
+      val: 90,
+      color: "blue",
+      icon: <SiFlutter size={32} />,
+    },
+    {
+      name: "JavaScript",
+      sub: "async function shipFeature() {}",
+      val: 92,
       color: "yellow",
+      icon: <SiJavascript size={32} />,
+    },
+    {
+      name: "Python",
+      sub: "def automate_business_flow():",
+      val: 88,
+      color: "green",
       icon: <SiPython size={32} />,
     },
     {
-      name: "Scrapy",
-      sub: "$ scrapy crawl infinite_data",
-      val: 93,
-      color: "green",
-      icon: <SiScrapy size={32} />,
-    },
-    {
-      name: "Selenium",
-      sub: "$ driver.execute('dreams')",
-      val: 90,
-      color: "blue",
-      icon: <SiSelenium size={32} />,
-    },
-    {
-      name: "Pandas",
-      sub: "$ df.transform(chaos, order)",
-      val: 92,
-      color: "pink",
-      icon: <SiPandas size={32} />,
-    },
-    {
-      name: "Django",
-      sub: "$ views.deploy(production)",
-      val: 88,
-      color: "teal",
-      icon: <SiDjango size={32} />,
-    },
-    {
-      name: "TensorFlow",
-      sub: "$ model.predict(future)",
-      val: 85,
+      name: "Java",
+      sub: "public class ReliableBackend {}",
+      val: 84,
       color: "orange",
-      icon: <SiTensorflow size={32} />,
+      icon: <FaJava size={32} />,
     },
     {
-      name: "PostgreSQL",
-      sub: "$ SELECT * FROM success",
-      val: 87,
-      color: "cyan",
-      icon: <SiPostgresql size={32} />,
-    },
-    {
-      name: "APIs",
-      sub: "$ REST.connect(everything)",
-      val: 91,
+      name: "WordPress",
+      sub: "theme.customize(client_brand)",
+      val: 92,
       color: "purple",
-      icon: <SiFastapi size={32} />,
+      icon: <SiWordpress size={32} />,
+    },
+    {
+      name: "Databases",
+      sub: "SELECT insight FROM business;",
+      val: 86,
+      color: "teal",
+      icon: <SiMysql size={32} />,
+    },
+    {
+      name: "Digital Growth",
+      sub: "campaign.optimize(conversions)",
+      val: 89,
+      color: "pink",
+      icon: <FaBullhorn size={32} />,
     },
   ];
 
   return (
     <section className="skills-section" id="skills">
       <div className="skills-container">
-        {/* HEADER */}
         <div className="skills-header">
-          <div className="badge">⚡ My Tech Arsenal</div>
+          <div className="badge">Tech stack and execution strength</div>
           <h2>
             &lt;Skills &amp; <span className="gradient-text">Expertise</span>
             /&gt;
           </h2>
           <p>
-            The tools and technologies I use to transform ideas into powerful
-            automations
+            A practical full-stack toolkit for websites, mobile apps, backend
+            systems, CMS builds, and digital business growth.
           </p>
         </div>
 
-        {/* MAIN BOX */}
         <div className="skills-box">
           <div className="skills-topbar">
             <div className="dots">
@@ -95,15 +92,14 @@ export default function Skills() {
               <span />
               <span />
             </div>
-            <span className="topbar-title">skills.py — kawsarlog</span>
+            <span className="topbar-title">stack.config.js - rayhan</span>
             <div className="topbar-icons">
-              <span>✕</span>
-              <span>─</span>
-              <span>□</span>
+              <span>x</span>
+              <span>-</span>
+              <span>[]</span>
             </div>
           </div>
 
-          {/* GRID */}
           <div className="skills-grid">
             {skills.map((s, index) => (
               <div
@@ -128,10 +124,7 @@ export default function Skills() {
 
                 <div className="bar-container">
                   <div className="bar">
-                    <div
-                      className={`fill ${s.color}`}
-                      style={{ width: `${s.val}%` }}
-                    >
+                    <div className={`fill ${s.color}`} style={{ width: `${s.val}%` }}>
                       <div className="glow"></div>
                     </div>
                   </div>
@@ -140,59 +133,57 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* TERMINAL */}
           <div className="terminal-output">
             <div className="terminal-header">
               <span className="terminal-prompt">$</span>
-              <span className="terminal-command">npm run skill-check</span>
+              <span className="terminal-command">npm run stack-audit</span>
               <span className="terminal-cursor"></span>
             </div>
             <div className="terminal-lines">
               <p className="terminal-line">
-                <span className="success">✔</span> All 8 skills loaded
-                successfully
+                <span className="success">OK</span> JavaScript, Python, Java,
+                Flutter, and WordPress loaded
               </p>
               <p className="terminal-line highlight">
-                <span className="arrow">→</span> Ready to automate the
-                impossible
+                <span className="arrow">-&gt;</span> Ready for web, app, software,
+                and growth projects
               </p>
               <p className="terminal-line typing">
-                <span className="prompt">$</span> python main.py --optimize
+                <span className="prompt">$</span> deploy --client business
                 <span className="cursor-blink"></span>
               </p>
             </div>
           </div>
         </div>
 
-        {/* STATS */}
         <div className="skills-stats">
           <div className="stat-card">
             <div className="stat-icon">
               <FaLaptopCode size={32} />
             </div>
-            <div className="stat-number">5+</div>
-            <div className="stat-label">Programming Languages</div>
+            <div className="stat-number">Web</div>
+            <div className="stat-label">React and WordPress</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon">
+              <SiFlutter size={32} />
+            </div>
+            <div className="stat-number">Apps</div>
+            <div className="stat-label">Flutter Development</div>
           </div>
           <div className="stat-card">
             <div className="stat-icon">
               <FaBook size={32} />
             </div>
-            <div className="stat-number">8+</div>
-            <div className="stat-label">Frameworks & Libraries</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">
-              <FaRocket size={32} />
-            </div>
-            <div className="stat-number">1500+</div>
-            <div className="stat-label">Projects Completed</div>
+            <div className="stat-number">IT</div>
+            <div className="stat-label">Digital NexGen Services</div>
           </div>
           <div className="stat-card">
             <div className="stat-icon">
               <FaAward size={32} />
             </div>
-            <div className="stat-number">5+ yrs</div>
-            <div className="stat-label">Industry Experience</div>
+            <div className="stat-number">CEO</div>
+            <div className="stat-label">Digital NexGen and Sohoz Point</div>
           </div>
         </div>
       </div>

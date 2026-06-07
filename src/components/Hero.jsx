@@ -1,49 +1,60 @@
 import "./Hero.css";
 
 export default function Hero() {
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-left">
-        <div className="badge">✨ Available for freelance work</div>
+        <div className="badge">Available for full-stack and app projects</div>
 
         <h1>
-          I'm MD Kawsar <br />
-          <span>Python</span> Developer
+          Rayhan Islam Rokon <br />
+          <span>Full-Stack</span> Developer
         </h1>
 
         <p>
-          I transform complex data challenges into{" "}
-          <b>elegant automation solutions</b> that scale your business.
+          Tech entrepreneur, app and web developer, and digital strategist
+          building <b> scalable software, mobile apps, and business-ready IT solutions</b>.
         </p>
 
-        <div className="location">● Based in Dhaka, Bangladesh</div>
+        <div className="location">Based in Gazipur, Bangladesh</div>
 
         <div className="skills">
           {[
+            "React.js",
+            "Flutter",
+            "JavaScript",
             "Python",
-            "Scrapy",
-            "Pandas",
-            "Selenium",
-            "Django",
-            "TensorFlow",
+            "Java",
+            "WordPress",
+            "Cybersecurity",
+            "Digital Marketing",
           ].map((item) => (
             <span key={item}>{item}</span>
           ))}
         </div>
 
         <div className="buttons">
-          <button className="primary">Let's Talk →</button>
-          <button className="secondary">View Projects</button>
+          <button className="primary" onClick={() => scrollTo("contact")}>
+            Let's Talk
+          </button>
+          <button className="secondary" onClick={() => scrollTo("portfolio")}>
+            View Projects
+          </button>
         </div>
 
         <div className="stats">
           <div>
-            <h2>1500+</h2>
-            <p>Projects</p>
+            <h2>2</h2>
+            <p>Companies Led</p>
           </div>
           <div>
-            <h2>950+</h2>
-            <p>Clients</p>
+            <h2>3+</h2>
+            <p>Core Stacks</p>
           </div>
         </div>
       </div>
@@ -55,22 +66,25 @@ export default function Hero() {
             <span />
             <span />
           </div>
-          <p>$ python ml_model.py</p>
+          <p>$ npm create rayhan-portfolio --stack full</p>
         </div>
 
         <div className="code">
           <pre>
-            <span className="keyword">class</span>{" "}
-            <span className="class-name">Developer</span>:{"\n    "}
-            <span className="property">name</span> ={" "}
-            <span className="string">"MD Kawsar"</span>
-            {"\n    "}
-            <span className="property">focus</span> ={" "}
-            <span className="array">["Automation", "Data", "AI"]</span>
-            {"\n    "}
-            <span className="property">experience</span> ={" "}
-            <span className="function">float</span>(
-            <span className="string">'inf'</span>)
+            <span className="keyword">const</span>{" "}
+            <span className="property">developer</span> = {"{"}
+            {"\n  "}
+            <span className="property">name</span>:{" "}
+            <span className="string">"Rayhan Islam Rokon"</span>,
+            {"\n  "}
+            <span className="property">roles</span>:{" "}
+            <span className="array">["Founder", "CEO", "Full-Stack Developer"]</span>,
+            {"\n  "}
+            <span className="property">builds</span>:{" "}
+            <span className="function">ship</span>(
+            <span className="array">["web", "apps", "software"]</span>)
+            {"\n"}
+            {"}"};
           </pre>
         </div>
       </div>
