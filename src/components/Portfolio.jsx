@@ -14,22 +14,22 @@ export default function Portfolio() {
       title: "Business Website Platform",
       file: "business_site.jsx",
       code: "render(<BusinessWebsite />)",
-      desc: "A responsive React-based company website system with service pages, lead capture sections, fast loading, and conversion-focused UI.",
-      stats: "React",
-      statsLabel: "Frontend",
-      tech: ["React.js", "JavaScript", "SEO"],
+      desc: "A responsive MERN stack company website system with service pages, lead capture, admin-ready backend, and conversion-focused UI.",
+      stats: "MERN",
+      statsLabel: "Stack",
+      tech: ["MongoDB", "Express", "React", "Node.js"],
       icon: <FaCode size={28} />,
       color: "blue",
       gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)",
     },
     {
-      title: "Flutter Service App",
-      file: "sohoz_point_app.dart",
-      code: "Navigator.push(context, ServiceFlow())",
-      desc: "A mobile-first app concept for service discovery, customer requests, booking flows, and smooth cross-platform user experience.",
-      stats: "Flutter",
+      title: "React Native Service App",
+      file: "sohoz_point_app.tsx",
+      code: "navigation.navigate('ServiceFlow')",
+      desc: "A mobile-first React Native app concept for service discovery, customer requests, booking flows, and smooth cross-platform UX.",
+      stats: "RN",
       statsLabel: "Mobile",
-      tech: ["Flutter", "Dart", "Firebase"],
+      tech: ["React Native", "JavaScript", "Firebase"],
       icon: <FaMobileAlt size={28} />,
       color: "cyan",
       gradient: "linear-gradient(135deg, #06b6d4, #22d3ee)",
@@ -71,13 +71,13 @@ export default function Portfolio() {
       gradient: "linear-gradient(135deg, #a855f7, #ec4899)",
     },
     {
-      title: "WordPress Lead Website",
-      file: "wordpress_theme.php",
-      code: "get_template_part('services')",
-      desc: "A polished WordPress business website with service structure, brand presentation, contact sections, and search-friendly pages.",
-      stats: "WP",
-      statsLabel: "CMS",
-      tech: ["WordPress", "Elementor", "SEO"],
+      title: "MERN Lead Website",
+      file: "lead_website.jsx",
+      code: "await api.post('/leads', formData)",
+      desc: "A polished MERN business website with service structure, brand presentation, contact flow, lead storage, and search-friendly pages.",
+      stats: "Leads",
+      statsLabel: "CRM",
+      tech: ["React", "Node.js", "MongoDB"],
       icon: <FaBullhorn size={28} />,
       color: "teal",
       gradient: "linear-gradient(135deg, #14b8a6, #2dd4bf)",
@@ -95,7 +95,7 @@ export default function Portfolio() {
           <h2>
             Featured <span className="gradient">Work</span>
           </h2>
-          <p># Practical web, app, backend, CMS, marketing, and security builds</p>
+          <p># Practical MERN, React Native, backend, marketing, and security builds</p>
         </div>
 
         <div className="portfolio-grid">

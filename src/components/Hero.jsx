@@ -12,8 +12,7 @@ export default function Hero() {
         <div className="badge">Available for full-stack and app projects</div>
 
         <h1>
-          Rayhan Islam Rokon <br />
-          <span>Full-Stack</span> Developer
+          Rayhan Islam Rokon <span>Full-Stack</span> Developer
         </h1>
 
         <p>
@@ -26,11 +25,13 @@ export default function Hero() {
         <div className="skills">
           {[
             "React.js",
-            "Flutter",
+            "React Native",
+            "MERN Stack",
             "JavaScript",
+            "Node.js",
+            "MongoDB",
             "Python",
             "Java",
-            "WordPress",
             "Cybersecurity",
             "Digital Marketing",
           ].map((item) => (

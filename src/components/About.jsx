@@ -10,17 +10,17 @@ export default function About() {
     },
     {
       key: "mobile_apps",
-      label: "Flutter app development",
+      label: "React Native mobile app development",
       val: 90,
     },
     {
       key: "backend",
-      label: "Python, Java, APIs, database logic",
+      label: "Node.js, Express, Python, Java, APIs",
       val: 88,
     },
     {
-      key: "cms",
-      label: "WordPress and business websites",
+      key: "mern_stack",
+      label: "MongoDB, Express, React, Node.js apps",
       val: 92,
     },
     {
@@ -67,9 +67,9 @@ export default function About() {
 
         <p className="about-text">
           Rayhan Islam Rokon is a Bangladeshi tech entrepreneur, full-stack
-          developer, app developer, and digital marketer. As Founder and CEO of
+          developer, React Native app developer, and digital marketer. As Founder and CEO of
           Digital NexGen and Sohoz Point, he focuses on helping businesses move
-          faster with modern websites, mobile apps, software systems, IT
+          faster with MERN stack websites, mobile apps, software systems, IT
           services, digital marketing, and secure technology practices.
         </p>
 

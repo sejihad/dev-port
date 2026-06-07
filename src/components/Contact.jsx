@@ -134,7 +134,8 @@ export default function Contact() {
                   <option value="Full-Stack Website">Full-Stack Website</option>
                   <option value="Mobile App">Mobile App</option>
                   <option value="Software System">Software System</option>
-                  <option value="WordPress Website">WordPress Website</option>
+                  <option value="MERN Stack App">MERN Stack App</option>
+                  <option value="React Native App">React Native App</option>
                   <option value="Cybersecurity Review">Cybersecurity Review</option>
                   <option value="Digital Marketing">Digital Marketing</option>
                 </select>

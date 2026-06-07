@@ -2,12 +2,13 @@ import "./Skills.css";
 
 import { FaAward, FaBook, FaBullhorn, FaJava, FaLaptopCode } from "react-icons/fa";
 import {
-  SiFlutter,
+  SiExpress,
   SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
   SiMysql,
   SiPython,
   SiReact,
-  SiWordpress,
 } from "react-icons/si";
 
 export default function Skills() {
@@ -20,11 +21,25 @@ export default function Skills() {
       icon: <SiReact size={32} />,
     },
     {
-      name: "Flutter",
-      sub: "Widget app = launchCrossPlatform();",
+      name: "React Native",
+      sub: "const app = createNativeExperience();",
       val: 90,
       color: "blue",
-      icon: <SiFlutter size={32} />,
+      icon: <SiReact size={32} />,
+    },
+    {
+      name: "Node.js",
+      sub: "server.listen(scaleBusiness);",
+      val: 89,
+      color: "green",
+      icon: <SiNodedotjs size={32} />,
+    },
+    {
+      name: "Express.js",
+      sub: "router.post('/api/growth', handler);",
+      val: 88,
+      color: "teal",
+      icon: <SiExpress size={32} />,
     },
     {
       name: "JavaScript",
@@ -34,11 +49,11 @@ export default function Skills() {
       icon: <SiJavascript size={32} />,
     },
     {
-      name: "Python",
-      sub: "def automate_business_flow():",
-      val: 88,
+      name: "MongoDB",
+      sub: "db.clients.insertOne(solution);",
+      val: 87,
       color: "green",
-      icon: <SiPython size={32} />,
+      icon: <SiMongodb size={32} />,
     },
     {
       name: "Java",
@@ -48,11 +63,11 @@ export default function Skills() {
       icon: <FaJava size={32} />,
     },
     {
-      name: "WordPress",
-      sub: "theme.customize(client_brand)",
-      val: 92,
+      name: "Python",
+      sub: "def automate_business_flow():",
+      val: 88,
       color: "purple",
-      icon: <SiWordpress size={32} />,
+      icon: <SiPython size={32} />,
     },
     {
       name: "Databases",
@@ -81,7 +96,7 @@ export default function Skills() {
           </h2>
           <p>
             A practical full-stack toolkit for websites, mobile apps, backend
-            systems, CMS builds, and digital business growth.
+            systems, API backends, and digital business growth.
           </p>
         </div>
 
@@ -141,8 +156,8 @@ export default function Skills() {
             </div>
             <div className="terminal-lines">
               <p className="terminal-line">
-                <span className="success">OK</span> JavaScript, Python, Java,
-                Flutter, and WordPress loaded
+                <span className="success">OK</span> MERN stack, React Native,
+                Python, and Java loaded
               </p>
               <p className="terminal-line highlight">
                 <span className="arrow">-&gt;</span> Ready for web, app, software,
@@ -161,15 +176,15 @@ export default function Skills() {
             <div className="stat-icon">
               <FaLaptopCode size={32} />
             </div>
-            <div className="stat-number">Web</div>
-            <div className="stat-label">React and WordPress</div>
+            <div className="stat-number">MERN</div>
+            <div className="stat-label">MongoDB, Express, React, Node</div>
           </div>
           <div className="stat-card">
             <div className="stat-icon">
-              <SiFlutter size={32} />
+              <SiReact size={32} />
             </div>
             <div className="stat-number">Apps</div>
-            <div className="stat-label">Flutter Development</div>
+            <div className="stat-label">React Native Development</div>
           </div>
           <div className="stat-card">
             <div className="stat-icon">

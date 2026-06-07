@@ -11,13 +11,21 @@ import {
   FaStar,
   FaTwitter,
 } from "react-icons/fa";
-import { SiFlutter, SiJavascript, SiPython, SiReact, SiWordpress } from "react-icons/si";
+import {
+  SiExpress,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+} from "react-icons/si";
 import profilePic from "../assets/profile.jpg";
 import "./Intro.css";
 
 export default function Profile() {
   const [typedText, setTypedText] = useState("");
-  const fullText = "I build websites, apps, software systems, and digital growth engines.";
+  const fullText =
+    "I build MERN stack websites, React Native apps, software systems, and digital growth engines.";
   const [currentIndex, setCurrentIndex] = useState(0);
   const isTypingComplete = currentIndex >= fullText.length;
 
@@ -61,7 +69,7 @@ export default function Profile() {
                   <SiReact /> React
                 </span>
                 <span className="tech-badge">
-                  <SiFlutter /> Flutter
+                  <SiReact /> React Native
                 </span>
               </div>
             </div>
@@ -98,16 +106,22 @@ export default function Profile() {
               <SiReact className="tag-icon" /> REACT.JS
             </span>
             <span className="tag">
-              <SiFlutter className="tag-icon" /> FLUTTER APPS
+              <SiReact className="tag-icon" /> REACT NATIVE
             </span>
             <span className="tag">
               <SiJavascript className="tag-icon" /> JAVASCRIPT
             </span>
             <span className="tag">
-              <SiPython className="tag-icon" /> PYTHON
+              <SiNodedotjs className="tag-icon" /> NODE.JS
             </span>
             <span className="tag">
-              <SiWordpress className="tag-icon" /> WORDPRESS
+              <SiExpress className="tag-icon" /> EXPRESS
+            </span>
+            <span className="tag">
+              <SiMongodb className="tag-icon" /> MONGODB
+            </span>
+            <span className="tag">
+              <SiPython className="tag-icon" /> PYTHON
             </span>
           </div>
 
@@ -124,7 +138,7 @@ export default function Profile() {
             <p className="desc-continue">
               Rayhan is a tech entrepreneur based in Gazipur, Bangladesh. He is
               the Founder and CEO of Digital NexGen and Sohoz Point, working
-              across web development, app development, digital marketing, IT
+              across MERN stack web development, React Native app development, digital marketing, IT
               services, and ethical security research. He studied at Model
               Institute of Science & Technology (MIST).
             </p>
